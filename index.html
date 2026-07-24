@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ingeniería Eléctrica Aplicada</title>
+<meta name="description" content="Cursos de mantenimiento eléctrico industrial con casos reales de planta: protecciones, variadores, subestaciones y análisis de fallas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/estilos.css">
+<link rel="icon" href="img/icono.png">
+</head>
+<body>
+
+<main>
+  <section class="portada">
+    <div class="envoltura portada__rejilla">
+      <div>
+        <img class="portada__logo" src="img/logo-completo.png" alt="Alí Fabián Pedraza García"
+             onerror="this.style.display='none'">
+        <p class="etiqueta">Formación técnica desde planta</p>
+        <h1 class="placa portada__titulo">
+          Lo que no viene<em>en el manual</em>
+        </h1>
+        <p class="portada__entrada">
+          Cursos de mantenimiento eléctrico industrial armados con casos reales
+          de una planta en operación: protecciones, subestaciones, variadores y
+          análisis de fallas. Sin teoría de relleno.
+        </p>
+        <div class="portada__acciones">
+          <a class="boton" href="#cursos">Ver los cursos</a>
+          <a class="boton boton--linea" href="#autor">Quién los imparte</a>
+        </div>
+
+        <div class="portada__firma">
+          <div class="firma__dato"><strong>6 AÑOS</strong><span>Jefe de Turno Electrico</span></div>
+          <div class="firma__dato"><strong>7 AÑOS</strong><span>Jefe de Mantto Electrico</span></div>
+          <div class="firma__dato"><strong>Diplomados y Cursos</strong><span>Analisis de datos/Universidad de Colima - Mantto/Predyc - Mantto/NOVA Confiabilidad </span></div>
+        </div>
+      </div>
+
+      <!-- Elemento firma: curvas tiempo-corriente -->
+      <figure class="curvas">
+        <svg viewBox="0 0 420 320" role="img" aria-label="Gráfica de curvas tiempo-corriente coordinadas">
+          <defs>
+            <pattern id="malla" width="30" height="26.6" patternUnits="userSpaceOnUse">
+              <path d="M30 0H0V26.6" fill="none" stroke="#d8e1e8" stroke-width="1"/>
+            </pattern>
+            <pattern id="malla-fina" width="6" height="5.32" patternUnits="userSpaceOnUse">
+              <path d="M6 0H0V5.32" fill="none" stroke="#eaeff3" stroke-width="1"/>
+            </pattern>
+          </defs>
+
+          <rect x="40" y="14" width="360" height="266" fill="#fff"/>
+          <rect x="40" y="14" width="360" height="266" fill="url(#malla-fina)"/>
+          <rect x="40" y="14" width="360" height="266" fill="url(#malla)"/>
+          <rect x="40" y="14" width="360" height="266" fill="none" stroke="#22282f" stroke-width="1.5"/>
+
+          <!-- Curvas de disparo -->
+          <path class="trazo" d="M60 40 C120 44, 150 70, 168 130 L168 262"
+                fill="none" stroke="#22282f" stroke-width="2.5" stroke-linecap="round"/>
+          <path class="trazo trazo--2" d="M60 96 C150 100, 200 128, 232 190 L232 262"
+                fill="none" stroke="#c1272d" stroke-width="2.5" stroke-linecap="round"/>
+          <path class="trazo trazo--3" d="M60 152 C190 156, 260 186, 300 232 L300 262"
+                fill="none" stroke="#1f4e8c" stroke-width="2.5" stroke-linecap="round"/>
+
+          <!-- Falla -->
+          <line x1="340" y1="14" x2="340" y2="280" stroke="#1e7a4f" stroke-width="1.5" stroke-dasharray="5 4"/>
+          <text x="336" y="298" font-family="IBM Plex Mono, monospace" font-size="10"
+                fill="#1e7a4f" text-anchor="middle">Icc</text>
+
+          <text x="14" y="24" font-family="IBM Plex Mono, monospace" font-size="10" fill="#7b8a99">t (s)</text>
+          <text x="396" y="298" font-family="IBM Plex Mono, monospace" font-size="10" fill="#7b8a99" text-anchor="end">I (A)</text>
+        </svg>
+        <figcaption class="curvas__pie">
+          <span class="etiqueta">Alimentador</span>
+          <span class="etiqueta" style="color:#c1272d">Transformador</span>
+          <span class="etiqueta" style="color:#1f4e8c">Motor</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="seccion" id="cursos">
+    <div class="envoltura">
+      <div class="seccion__encabezado">
+        <h2 class="placa">Cursos</h2>
+        <span class="etiqueta">Actualizado conforme se graban</span>
+      </div>
+      <div class="catalogo" id="catalogo"></div>
+    </div>
+  </section>
+
+  <section class="seccion" id="autor">
+    <div class="envoltura">
+      <div class="seccion__encabezado">
+        <h2 class="placa">Quién imparte</h2>
+      </div>
+      <div style="max-width:64ch">
+        <p>
+          Soy Alí F Pedraza G, ingeniero mecánico electricista con maestría 
+en administración energética. Llevo años al frente del depto. de mantenimiento
+eléctrico en la industria azucarera de México, coordinando tareas operativas y
+de mantto en campo a equipos y sistemas eléctricos, gestionando recursos
+financieros para ejecución de proyectos y mantto planificado, así como administrando
+recursos humanos y económicos según las necesidades y prioridades basados en la teoría
+de mantto de precisión, monitoreo por condición, gestión de activos, etc...
+        </p>
+        <p>
+          Enseño lo que uso: Este curso está enfocado en el día a día de una industria 
+de uso y demanda pesada para el ámbito eléctrico como lo es la industria azucarera de México,
+el enfoque es práctico, todo aquello que no viste en el salón de clases, en la libreta o la IA.
+        </p>
+        <p><a class="boton" href="mailto:pdrz900120@gmail.com">Escríbeme</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="js/contenido.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
